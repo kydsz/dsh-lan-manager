@@ -16,6 +16,29 @@ dsh(DeepSeek Harness)局域网管理工具。交互式菜单一键启动/停止 
 
 - 跨平台:Windows(经 WSL)与 Linux;WSL 发行版自动识别,配置全部用相对路径
 
+## 运行环境
+
+| 平台 | 必需环境 |
+| --- | --- |
+| Windows | Windows 10/11 64 位 + WSL(已安装发行版,如 Ubuntu-24.04);dsh 在 WSL 内运行 |
+| Linux | 64 位发行版,本机直接运行 |
+
+**dsh 所在系统(即 WSL 发行版或 Linux 本机)需安装以下工具:**
+
+| 工具 | 用途 |
+| --- | --- |
+| Node.js ≥ 18 + pnpm | 启动 dsh(DeepSeek Harness 自身依赖) |
+| git | 检测 dsh 仓库更新 |
+| perl | 重置授权时清理浏览器会话凭证 |
+| ss(iproute2 包) | 检测端口占用 |
+| bash + coreutils(timeout) | 执行内部脚本 |
+
+**其他要求:**
+
+- 自行构建需要 Go ≥ 1.26;直接使用可执行文件则无需安装 Go
+- 更新检测需能访问 GitHub API
+- 手机扫码访问需手机与电脑在同一局域网
+
 ## 安装
 
 把可执行文件放在 **deepseek-harness 仓库目录** 下即可运行:
