@@ -1,0 +1,13 @@
+# 编译产物
+dsh-lan-manager*
+*.exe
+
+# 运行时生成
+lan-bind.yml
+manager-state.json
+
+# 本地配置
+config.yml
+
+# IDE
+.idea/
